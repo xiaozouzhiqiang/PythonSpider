@@ -8,27 +8,27 @@ db = client.pythonMongo
 collection = db.qa
 
 # # 加入一条文档数据到集合中
-# collection.insert_one({"title": "abcc","password":"heihei"})
+collection.insert_one({"title": "abcc","password":"heihei"})
 
 # 加入多条文档数据到集合中
-# item_1 = {
-#   "_id" : "U1IT00001",
-#   "item_name" : "Blender",
-#   "max_discount" : "10%",
-#   "batch_number" : "RR450020FRG",
-#   "price" : 340,
-#   "category" : "kitchen appliance"
-# }
-#
-# item_2 = {
-#   "_id" : "U1IT00002",
-#   "item_name" : "Egg",
-#   "category" : "food",
-#   "quantity" : 12,
-#   "price" : 36,
-#   "item_description" : "brown country eggs"
-# }
-# collection.insert_many([item_1,item_2])
+item_1 = {
+  "_id" : "U1IT00001",
+  "item_name" : "Blender",
+  "max_discount" : "10%",
+  "batch_number" : "RR450020FRG",
+  "price" : 340,
+  "category" : "kitchen appliance"
+}
+
+item_2 = {
+  "_id" : "U1IT00002",
+  "item_name" : "Egg",
+  "category" : "food",
+  "quantity" : 12,
+  "price" : 36,
+  "item_description" : "brown country eggs"
+}
+collection.insert_many([item_1,item_2])
 
 # 查找一条文档数据
 # result = collection.find_one()
@@ -44,14 +44,14 @@ for x in result:
 # collection.update_one({"title":'abcc'},{"$set":{"title":'abc'}})
 
 # 更新多条文档数据
-myquery = {"title":"123",}
-newvalues = {"$set": {"title": "123"}}
-x = collection.update_many(myquery, newvalues)
-print("文档已修改",x.modified_count)
+# myquery = {"title":"123",}
+# newvalues = {"$set": {"title": "123"}}
+# x = collection.update_many(myquery, newvalues)
+# print("文档已修改",x.modified_count)
 
-# 删除数据
-x = collection.delete_one(myquery)
-print("文档已删除：",x.deleted_count)
-# 填入空集合，则删除所有数据
-x= collection.delete_many({})
+# # 删除数据
+# x = collection.delete_one(myquery)
+# print("文档已删除：",x.deleted_count)
+# # 填入空集合，则删除所有数据
+# x= collection.delete_many({})
 # print("文档已删除：",x.deleted_count)
