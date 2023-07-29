@@ -1,6 +1,7 @@
 # PythonSpider
-Python分布式爬虫学习笔记及代码
+Python distributed crawler study notes and code
 
-## 本地环境
+## local environment
 ### 1. Python 3.10.2
 ### 2. Windows 11
+
