@@ -42,16 +42,16 @@ if __name__ == '__main__':
     conn = pymysql.connect(
         host="localhost",
         user='root',
-        password='root',
+        password='zmy520..',
         database='pythonmysql',
         port=3306
     )
-    # username = 'heihei'
-    # age = 25
-    # password = 'zouzhiqiang'
+    username = 'heihei'
+    age = 25
+    password = 'zouzhiqiang'
     cursor = conn.cursor()
     # 向数据库中插入一条数据
-    # mysql_insert_info(cursor,username,age,password)
+    mysql_insert_info(cursor,username,age,password)
     # 查找数据库中的数据
     # mysql_select(cursor)
     # 删除数据库中的数据
