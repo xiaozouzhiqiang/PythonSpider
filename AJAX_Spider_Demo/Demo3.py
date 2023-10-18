@@ -8,12 +8,7 @@ from selenium.webdriver.support.ui import Select
 
 def run_Write_input():
     ## 下面这些都是操作输入框的操作
-    driver_path = r"M:\chromedriver\chromedriver.exe"
-    server = Service(executable_path=driver_path)
-    option = webdriver.ChromeOptions()
-    # 这句语句实现不自动关闭浏览器
-    option.add_experimental_option('detach', True)
-    driver = webdriver.Chrome(service=server,options=option)
+    driver = webdriver.Firefox()
     driver.get("http://www.baidu.com")
     # 按照类名来获取输入框
     inputTag = driver.find_element(By.CLASS_NAME,"s_ipt")
@@ -70,12 +65,7 @@ def run_check_select():
 
 def run_click_btn():
     # 实现单击按钮查询生辰八字
-    driver_path = r"M:\chromedriver\chromedriver.exe"
-    server = Service(executable_path=driver_path)
-    option = webdriver.ChromeOptions()
-    # 这句语句实现不自动关闭浏览器
-    option.add_experimental_option('detach', True)
-    driver = webdriver.Chrome(service=server, options=option)
+    driver = webdriver.Firefox()
     driver.get("https://www.buyiju.com/")
     clickBtn = driver.find_element(By.CLASS_NAME,"zbbtn")
     time.sleep(2)
